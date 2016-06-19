@@ -18,7 +18,7 @@ page '/*.txt', layout: false
 
 # General configuration
 
-set :haml, { :ugly => true, :format => :html5 }
+set :haml, ugly: true, format: :html5
 
 # Reload the browser automatically whenever files change
 configure :development do
