@@ -1,8 +1,7 @@
 !!!
 %html
-  %head{ lang: 'en' }
-    = partial 'head'
+  = partial 'head'
   %body{ class: page_classes }
-    %header
-      = partial 'header'
+    = partial 'header'
     = yield
+    = partial 'footer'
