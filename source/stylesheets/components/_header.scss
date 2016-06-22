@@ -1,0 +1,64 @@
+header {
+  height: 80px;
+  background-color: white;
+}
+
+
+.header__logo { height: 80px; width: 80px; }
+
+.header__book {
+  font-size: $type-size-5;
+  position: absolute;
+  top: 32px;
+  left: 20px;
+  @include breakpoint(md) {
+    font-size: $type-size-4;
+    top: 30px;
+    left: 33px;
+  }
+}
+
+.menu-collapsed {
+  font-size: $type-size-5;
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 1;
+  @include breakpoint(md) {
+    font-size: $type-size-4;
+    top: 23px;
+    right: 33px;
+  }
+  ul {
+    position: fixed;
+    left: -9000px;
+  }
+  a {
+    font-size: 2em;
+    padding: 10px;
+    color: white;
+    &:hover {
+      border: 1px solid white;
+    }
+  }
+}
+
+.menu-expanded {
+  padding-top: 15%;
+  line-height: 3em;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  ul {
+    position: relative;
+    left: 0;
+    z-index: 2;
+  }
+}

@@ -1,3 +1,10 @@
-%header
-  %p Book for catering
-  %p Menu
+%header.centered
+  %a{ href: '/' }
+    = inline_svg 'logo', class: 'header__logo'
+  %a.header__book{ href: '/book.html' } Book for catering
+  .menu-collapsed
+    %div Menu
+    %nav
+      %ul
+        %li
+          %a{ href: '/about.html' } About
