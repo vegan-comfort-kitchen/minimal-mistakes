@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font: 16px/1 helvetica sans-serif;
+    font: 16px/1 "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
@@ -72,12 +72,24 @@ main {
   width: 100%;
 }
 
-p {
+.text {
   margin-bottom: 1.5em;
+  line-height: 1.7em;
   font-size: $type-size-4;
 }
 
 .top-text {
-  margin-top: 1.5em;
-  font-size: $type-size-3;
+  margin-top: 2em;
+}
+
+.h1 {
+  font-size: $type-size-1;
+  margin-top: 2em;
+}
+
+
+.h2 {
+  font-size: $type-size-2;
+  margin-top: 2em;
+  margin-bottom: .5em;
 }

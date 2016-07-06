@@ -1,42 +1,61 @@
 header {
   height: 80px;
   background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
-
-
-.header__logo { height: 80px; width: 80px; }
 
 .header__book {
+  flex-basis: 25%;
   font-size: $type-size-5;
-  position: absolute;
-  top: 32px;
-  left: 20px;
   @include breakpoint(md) {
     font-size: $type-size-4;
-    top: 30px;
-    left: 33px;
   }
 }
 
-.menu-collapsed {
+.header__title {
+  font-size: $type-size-4;
+  flex-basis: 50%;
+  @include breakpoint(xs) {
+    font-size: $type-size-3;
+  }
+  @include breakpoint(sm) {
+    font-size: $type-size-2;
+  }
+  @include breakpoint(md) {
+    font-size: $type-size-1;
+  }
+}
+
+.menu-toggle {
+  flex-basis: 25%;
   font-size: $type-size-5;
-  position: absolute;
-  top: 24px;
-  right: 20px;
-  border: 1px solid black;
-  padding: 5px;
-  border-radius: 3px;
-  cursor: pointer;
-  z-index: 1;
   @include breakpoint(md) {
     font-size: $type-size-4;
-    top: 23px;
-    right: 33px;
   }
+  div {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid black;
+    margin: 0 2em;
+  }
+}
+
+.menu {
+  z-index: 1;
+  cursor: pointer;
+  li {
+    text-align: center;
+  }
+
   ul {
     position: fixed;
     left: -9000px;
   }
+
   a {
     font-size: 2em;
     padding: 10px;
@@ -48,6 +67,7 @@ header {
 }
 
 .menu-expanded {
+  position: absolute;
   padding-top: 15%;
   line-height: 3em;
   height: 100%;

@@ -1,6 +1,5 @@
 .index {
   main {
-    background-color: black;
     color: white;
     padding-top: 7em;
     padding-bottom: 3em;
@@ -9,7 +8,7 @@
   .page-title {
     margin-top: -30px;
     position: absolute;
-
+    color: inherit;
     top: 50%;
     width: 100%;
     font-size: $type-size-1;
@@ -25,7 +24,7 @@
 
   .social-buttons {
     position: absolute;
-    top: 50%;
+    top: 80%;
     width: 100%;
     margin-top: 24px;
     li {
@@ -33,5 +32,10 @@
       padding-top: 5px;
       padding-bottom: 5px;
     }
+  }
+
+  .index__logo {
+    max-height: 20em;
+    width: 60%;
   }
 }

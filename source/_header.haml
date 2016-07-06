@@ -1,10 +1,10 @@
 %header.centered
-  %a{ href: '/' }
-    = inline_svg 'logo', class: 'header__logo'
   %a.header__book{ href: '/book.html' } Book for catering
-  .menu-collapsed
+  %a.header__title{ href: '/' } Vegan Comfort Kitchen
+  .menu-toggle
     %div Menu
-    %nav
-      %ul
-        %li
-          %a{ href: '/about.html' } About
+.menu
+  %nav
+    %ul
+      %li
+        %a{ href: '/about.html' } About
