@@ -1,0 +1,22 @@
+.press__images {
+  font-size: 0;
+  display: -ms-flexbox;
+  -ms-flex-wrap: wrap;
+  -ms-flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  display: -webkit-box;
+  display: flex;
+}
+.press__images div {
+  -webkit-box-flex: auto;
+  -ms-flex: auto;
+  flex: auto;
+  width: 400px;
+  margin-right: .5vh;
+  margin-bottom: .5vh;
+}
+.press__images div img {
+  width: 100%;
+  height: auto;
+}
