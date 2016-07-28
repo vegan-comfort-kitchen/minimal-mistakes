@@ -1,5 +1,4 @@
-.press__images {
-  font-size: 0;
+.instagram-images {
   display: -ms-flexbox;
   -ms-flex-wrap: wrap;
   -ms-flex-direction: column;
@@ -8,15 +7,10 @@
   display: -webkit-box;
   display: flex;
 }
-.press__images div {
+.instagram-image {
+  margin-top: 2em;
+  margin-left: 1em;
   -webkit-box-flex: auto;
   -ms-flex: auto;
   flex: auto;
-  width: 400px;
-  margin-right: .5vh;
-  margin-bottom: .5vh;
-}
-.press__images div img {
-  width: 100%;
-  height: auto;
 }
