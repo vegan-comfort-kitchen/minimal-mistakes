@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 var addMenuToggle = function(){
-  var menuToggle = document.querySelectorAll('.menu-toggle')[0]
-  var menu = document.querySelectorAll('.menu')[0]
-  menuToggle.addEventListener('click', function(){
-    menu.classList.toggle('menu-expanded');
+  var navToggle = document.querySelectorAll('.nav-toggle')[0]
+  var nav = document.querySelectorAll('.nav')[0]
+  navToggle.addEventListener('click', function(){
+    nav.classList.toggle('nav-expanded');
   });
-  menu.addEventListener('click', function(){
-    menu.classList.toggle('menu-expanded');
+  nav.addEventListener('click', function(){
+    nav.classList.toggle('nav-expanded');
   });
 }

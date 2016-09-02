@@ -3,7 +3,7 @@ header {
   background-color: white;
 }
 
-.menu-toggle {
+.nav-toggle {
   position: absolute;
   right: 0;
   top: 0;
@@ -20,7 +20,7 @@ header {
   }
 }
 
-.menu {
+.nav {
   z-index: 1;
   cursor: pointer;
   li {
@@ -42,7 +42,7 @@ header {
   }
 }
 
-.menu-expanded {
+.nav-expanded {
   position: absolute;
   padding-top: 15%;
   line-height: 3em;
