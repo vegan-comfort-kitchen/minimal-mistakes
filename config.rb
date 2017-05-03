@@ -40,7 +40,7 @@ helpers do
 
     if File.exists?(asset)
       file = File.open(asset, 'r') { |f| f.read }
-      doc = Nokogiri::HTML::DocumentFragment.parse(file)
+      doc = ::Nokogiri::HTML::DocumentFragment.parse(file)
       svg = doc.at_css("svg")
 
       if options[:class].present?
@@ -73,22 +73,4 @@ configure :build do
   activate :minify_html
   activate :asset_hash
   activate :gzip
-end
-
-activate :s3_sync do |s3_sync|
-  s3_sync.bucket                     = 'vegancomfortkitchen.com'
-  s3_sync.region                     = 'eu-west-1'
-  s3_sync.aws_access_key_id          = ENV['VCK_AWS_ACCESS_KEY_ID']
-  s3_sync.aws_secret_access_key      = ENV['VCK_AWS_SECRET_ACCESS_KEY']
-  s3_sync.delete                     = true
-  s3_sync.after_build                = false
-  s3_sync.prefer_gzip                = true
-  s3_sync.path_style                 = true
-  s3_sync.reduced_redundancy_storage = false
-  s3_sync.acl                        = 'public-read'
-  s3_sync.encryption                 = false
-  s3_sync.prefix                     = ''
-  s3_sync.version_bucket             = false
-  s3_sync.index_document             = 'index.html'
-  s3_sync.error_document             = '404.html'
 end
